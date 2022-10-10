@@ -3,14 +3,13 @@ import React from 'react'
 const Session = ({ sessions }) => {
   return (
     <div className='session-detail'>
+        <h3 className='header'>
+            Detail Session
+        </h3>
         {
             sessions.map((session, index) => {
                 return(
                     <div className='content' key={index}>
-                        <h3 className='header'  key={index}>
-                        Detail Session
-                        </h3>
-
                         <div className='description'  key={index}>
                             <h4>Session {index + 1}</h4>
                             <ul  key={index}>
@@ -21,10 +20,9 @@ const Session = ({ sessions }) => {
                                 <li  key={index}>Capacité : {session.room.capacity}</li>
                             </ul>
                         </div>
-                        <div className='ui divider'  key={index}></div>
                     </div>
                 )
-              })
+            })
         }
     </div>
   )
