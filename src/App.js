@@ -5,7 +5,7 @@ import SpeakerList from './components/SpeakerList';
 
 function App() {
   return (
-    <div className='ui container'>
+    <div className='ui'>
       <Header />
       <SpeakerList />
       <Footer />

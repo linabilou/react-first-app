@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ImageSpeaker = ({image}) => {
+
+const ImageSpeaker = ({id}) => {
   return (
     <div className='image'>
-      <img alt='' src={image} />
+      <img alt='' src={`images/speaker-${id}.jpg`} />
     </div>
   )
 }
