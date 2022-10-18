@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div>
+   <div>
         <div>
             <img
                 className='ui image'
@@ -10,23 +11,34 @@ const Header = () => {
                 src='/images/banner.jpg'
             />
         </div>
-        <div className='ui huge menu'>
-            <a href='#' className='item'>
-                Acceuil
-            </a>
-            <a href='#' className='item'>
-                Laisser un message
-            </a>
-            <a href='#' className='item'>
-                A propos
-            </a>
-            <div class='right menu'>
-                <a href='#' className='item'>
-                Faire un don
-                </a>
-            </div>
-        </div>
-    </div>
+        <>
+            <nav className='ui huge menu'>
+                <div>
+                    <Link to="/"  className='item'>
+                        Acceuil
+                    </Link>
+                </div>
+               <div>
+                    <Link to="/message"  className='item'>
+                        Laisser un message
+                    </Link>
+               </div>
+
+               <div>
+                    <Link to="/about"  className='item'>
+                        A propos
+                    </Link>
+               </div>
+                
+                <div  className='right menu'>
+                    <Link to="/donate"  className='item '>
+                        Faire un don
+                    </Link>
+                </div>
+            </nav>
+        </>
+        <Outlet />
+   </div>
   )
 }
 
